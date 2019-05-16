@@ -21,3 +21,14 @@ function changeGenre()
 	var currButton = document.getElementById("button3");
 	currButton.innerHTML = (currButton.innerHTML == "Покажи жанра на творбата") ? ("Скрий жанра на творбата") : ("Покажи жанра на творбата");	
 }
+function Ivan(genre, chars)
+{
+	console.log(genre);
+	console.log(chars);
+	var fixedText = document.getElementById("fixedtext");
+	fixedText.innerHTML = "Жанр: " + genre + "<br><br>Герои: ";
+	if(chars.length == 4)
+		fixedText.innerHTML += "няма";
+	else
+		fixedText.innerHTML += chars;
+}

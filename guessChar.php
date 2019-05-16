@@ -5,7 +5,6 @@
 ?>
 
 <div class="mainpart">
-	<p>Текущият герой за познаване е:</p>
 	<h2><?php echo $chars[$current_char][0]; ?> </h2>
 	Творба: <p id = "showWork" class="answers"><?php $currwork = $works[$chars[$current_char][1]]; echo $currwork[0]; ?></p>
 	Автор: <p id = "showAuthor" class="answers"><?php echo $authors[$currwork[1]]; ?></p>
@@ -17,9 +16,9 @@
 	<form action = "guessChar.php">
 		<button>Следващ герой</button>
 	</form>
+	<a href="index.php" id="homebutton">Към начална страница</a>
 	
 </div>
-
 <?php
 	require("footer.php");
 ?>
