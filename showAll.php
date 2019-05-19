@@ -18,14 +18,14 @@
 					{
 						echo '<li>';
 						$genre = $works[$j][2];
-						$char = "<br>- ";
+						$char = "<br>";
 						for($k = 0;$k < sizeof($chars);$k ++)
 						{
 							if($chars[$k][1] == $j)
-								$char = $char . $chars[$k][0]. "<br>- ";
+								$char = $char . $chars[$k][0]. ", ";
 						}
 						$char = substr_replace($char ,"", -2);
-						$currString = "Ivan('".$genre."','".$char."')";
+						$currString = "Ivan('".$genre."','".$char."','".$works[$j][0]."')";
 						echo '<p style="cursor: pointer" onclick="'.$currString.'">'.$works[$j][0].'</p>';
 						echo '</li>';
 					}
